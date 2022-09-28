@@ -2,7 +2,7 @@
 
 ## A Command Line Interface made with Python that convertes different currencies from all the world.
 
-This is a small project using [Typer](https://github.com/tiangolo/typer) with focus in learning. The application takes an argument and two optional parameters, the base currency and the target currency, the default is 'BRL' (Brazilian Real) and 'USD' (US Dolar) in that order. After that, the program makes a request to [ExchangeRate-API](https://www.exchangerate-api.com/), which responds with the calculated conversion.
+This is a small project using [Typer](https://github.com/tiangolo/typer) focusing in learning. The application takes an argument and two optional parameters, the base currency and the target currency, the default is 'BRL' (Brazilian Real) and 'USD' (US Dolar) in that order. After that, the program makes a request to [ExchangeRate-API](https://www.exchangerate-api.com/), which responds with the calculated conversion.
 
 # Table of Contents
 
@@ -28,7 +28,7 @@ poetry init
 poetry install
 ```
 
-To run the project use `poetry run python currenapp/main.py` or start the poetry shell to skip this commands.
+To run the project use `poetry run python currenapp/main.py` or start the poetry shell to skip these commands.
 
 ```zsh
 poetry shell
