@@ -20,7 +20,10 @@ This is a small project using [Typer](https://github.com/tiangolo/typer) focusin
 
 ## Instalation
 
-To install you have to clone this repository
+To install you have to clone this repository, go to the projects folder and run `poetry run python curennap/main.py`.
+~~~
+This is not final. A installation through pip will come eventually.
+~~~
 
 ## Making changes
 
