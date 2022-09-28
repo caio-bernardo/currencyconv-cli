@@ -6,7 +6,7 @@ This is a small project using [Typer](https://github.com/tiangolo/typer) focusin
 
 # Table of Contents
 
-[Know Issues](#KnowIsssues) - [Instalation](#Instalation) - [Making changes](#MakingChanges) - [Contributing](#Contributing) - [License](#License)
+[Know Issues](#know-isssues) - [Instalation](#instalation) - [Making changes](#making-changes) - [Contributing](#contributing) - [License](#license)
 
 ## Know Issues
 
@@ -39,6 +39,6 @@ python currenapp/main.py
 
 Issues and Pull Request are welcomed. If you want to make suggestions, ask or discuss anything, open a issue.
 
-## LICENSE
+## License
 
 [MIT](./LICENSE.md)
