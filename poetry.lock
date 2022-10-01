@@ -83,6 +83,17 @@ python-versions = "*"
 test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
 
 [[package]]
+name = "httmock"
+version = "1.4.0"
+description = "A mocking library for requests."
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+requests = ">=1.0.0"
+
+[[package]]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -295,7 +306,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "4a61093d2b2d700b1556361c81a2c423f700833e57358f68990d167d9909ed05"
+content-hash = "a6785c69a5d51da3ec6c6aa47dfd7b4997dc9777f3ceea97fdd522e7b7fdc74a"
 
 [metadata.files]
 attrs = [
@@ -346,6 +357,10 @@ colorama = [
 commonmark = [
     {file = "commonmark-0.9.1-py2.py3-none-any.whl", hash = "sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9"},
     {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
+]
+httmock = [
+    {file = "httmock-1.4.0-py3-none-any.whl", hash = "sha256:13e6c63f135a928e15d386af789a2890efb03e0e280f29bdc9961f3f0dc34cb9"},
+    {file = "httmock-1.4.0.tar.gz", hash = "sha256:44eaf4bb59cc64cd6f5d8bf8700b46aa3097cc5651b9bc85c527dfbc71792f41"},
 ]
 idna = [
     {file = "idna-3.4-py3-none-any.whl", hash = "sha256:90b77e79eaa3eba6de819a0c442c0b4ceefc341a7a2ab77d7562bf49f425c5c2"},
