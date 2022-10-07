@@ -24,6 +24,8 @@ test = "pytest"
 main = "python currenapp/main.py"
 i = "poetry install"
 tools = "python currenapp/tools.py"
+ui = "python currenapp/ui.py"
+
 
 [build-system]
 requires = ["poetry-core"]
