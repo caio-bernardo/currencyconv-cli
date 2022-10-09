@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 from rich import print as rprint
 from rich.console import Console
 
+from .ui import success_output, error_output
+
 console = Console()
 
 
@@ -46,18 +48,12 @@ def main(base: str = "USD", target: str = "BRL"):
     with console.status("Making the conversion", spinner="bouncingBall"):
         data = get_apidata(amount, base, target)
 
-    result = data.get("result")
-    match result:
+    match data.get("result"):
         case "success":
-            rprint("Conversion")
-            rprint(
-                f"${base}: {amount} = ${target}: {data.get('conversion_result')}")
-            rprint(f"Conversion rate: {data.get('conversion_rate')}")
-            rprint(f"Next Update in {data.get('time_next_update_utc')}")
-
+            data['base'] = base
+            console.print(success_output(data))
         case "error":
-            rprint("Something went wrong...")
-            print(f"Error Type: {data.get('error_type')}")
+            console.print(error_output(data))
             typer.Exit(code=1)
 
 

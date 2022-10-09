@@ -8,8 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 - [ ] Full Documentation
+- [ ] Better test coverage
 - [ ] Beautiful CLI
 - [ ] Offering PiPy installation
+
+## 0.3.0 — 2022-10-08
+
+### Added
+
+- Created ui.py to hold output formating and style.
+- Test of ui.py
+- Test coverage
+
+### Modified
+
+- Moved result output to ui.py
+- Removed result variable from main.py (it was useless).
 
 ## 0.2.0 — 2022-10-01
 

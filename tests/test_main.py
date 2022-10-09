@@ -1,7 +1,7 @@
 from currenapp.main import app, is_validargs
 from typer.testing import CliRunner
 import pytest
-from httmock import urlmatch, HTTMock
+# from httmock import urlmatch, HTTMock
 import json
 
 
@@ -41,7 +41,7 @@ def test_input_not_a_number(cmd_args):
     assert result.exit_code == 1
     assert "Expected a number" in result.stdout
 
-
-@urlmatch(netloc=r"(.*\.)?exchangerate-api")
-def api_mock(url, request):
-    return json.dumps({"result": "sucess"})
+# Maybe useful
+# @urlmatch(netloc=r"(.*\.)?exchangerate-api")
+# def api_mock(url, request):
+    # return json.dumps({"result": "sucess"})
