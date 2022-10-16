@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "currenapp"
-version = "0.1.0"
+version = "0.4.0"
 description = "A CLI to convert different currencies."
 authors = ["caio <caio.2004vb@gmail.com>"]
 readme = "README.md"
@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 requests = "^2.28.1"
-typer = {extras = ["all"], version = "^0.6.1"}
+typer = { extras = ["all"], version = "^0.6.1" }
 python-dotenv = "^0.21.0"
 
 [tool.poetry.scripts]
@@ -21,12 +21,10 @@ httmock = "^1.4.0"
 pytest-cov = "^4.0.0"
 
 [tool.poe.tasks]
-test = "pytest"
-main = "python currenapp/main.py"
-i = "poetry install"
-tools = "python currenapp/tools.py"
-ui = "python currenapp/ui.py"
-cov = "pytest -vv --cov=currenapp --cov-report=term-missing --cov-branch"
+test = "poetry run pytest"
+main = "poetry run python tests/test_main.py"
+ui = "poetry run python tests/test_ui.py"
+cov = "poetry run pytest -vv --cov=currenapp --cov-report=term-missing --cov-branch"
 
 [build-system]
 requires = ["poetry-core"]

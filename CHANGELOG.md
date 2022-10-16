@@ -7,10 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-- [ ] Full Documentation
-- [ ] Better test coverage
-- [ ] Beautiful CLI
 - [ ] Offering PiPy installation
+
+## 0.4.0
+
+### Added
+- Created tools.py file to store all helper functions
+- Corresponding test file
+- Better error display
+- Better display
+- Documentation
+
+### Modified
+- Moved some tests from test_main.py to test_tools.py
+
+## Fixes
+- Fixed the version number on pyproject.toml (it was outdated)
 
 ## 0.3.0 — 2022-10-08
 
