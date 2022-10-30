@@ -1,5 +1,4 @@
 import currenapp.tools as tools
-import pytest
 from httmock import all_requests, urlmatch, HTTMock
 import json
 

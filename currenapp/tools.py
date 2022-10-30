@@ -6,11 +6,14 @@ Functions that shouldn't be on main.py or ui.py but are involved with them.
 import re
 import requests
 import os
+import typer
 
 
-def get_apidata(amount: float, base: str, target: str) -> dict:
+def get_apidata(amount: float, base: str, target: str) -> dict | None:
     """Request to the Exchangerate-API"""
-    API_KEY = os.getenv("API_KEY")
+    API_KEY = os.environ.get("EXCHANGERATE_KEY")
+    if not API_KEY:
+        return
     url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/pair/{base}/{target}/{amount}"
     response = requests.get(url)
 

@@ -1,6 +1,4 @@
 import typer
-import os
-from dotenv import load_dotenv
 from rich.console import Console
 
 
@@ -10,9 +8,7 @@ import currenapp.tools as tools
 console = Console()
 
 
-load_dotenv()
-# Disable local variables on error logs for production
-app = typer.Typer(pretty_exceptions_show_locals=bool(os.getenv("SHOW_LOCALS")))
+app = typer.Typer()
 
 
 @app.command()
@@ -32,11 +28,16 @@ def main(base: str = "USD", target: str = "BRL"):
     try:
         amount = float(typer.prompt("Value to convert $"))
     except ValueError:
-        console.print("[bold red]Expected a number![/bold red].")
+        console.print("[bold red]Expected a number![/bold red]")
         raise typer.Abort()
 
     with console.status("Making the conversion", spinner="bouncingBall"):
         data = tools.get_apidata(amount, base, target)
+        if not data:
+            console.print(
+                "No API Key named 'EXCHANGERATE_KEY', please create and save one."
+            )
+            raise typer.Abort()
 
     match data.get("result"):
         case "success":
